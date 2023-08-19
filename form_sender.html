@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+
+      h2 {
+        margin-top: 20px;
+        color: #333;
+      }
+
+      form {
+        background-color: #fff;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Fill Out The Following Form</h2>
+    <form action="./form_acceptor.php" method="POST">
+      <label for="first-name">First Name:</label>
+      <input type="text" name="first-name" required /><br />
+      <label for="last-name">Last Name:</label>
+      <input type="text" name="last-name" required /><br />
+      <label for="date-of-birth">Date of Birth:</label>
+      <input type="date" name="date-of-birth" required /><br />
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option></select
+      ><br />
+      <label for="city">City:</label>
+      <input type="text" name="city" required /><br />
+      <label for="nationality">Nationality:</label>
+      <input type="text" name="nationality" required /><br />
+      <label for="martial-status">Martial Status:</label>
+      <select name="martial-status" id="martial-status" required>
+        <option value="married">Married</option>
+        <option value="single">Single</option>
+        <option value="divorced">Divorced</option></select
+      ><br />
+      <input type="submit" value="Submit" /><br />
+    </form>
+  </body>
+</html>
